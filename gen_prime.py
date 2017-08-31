@@ -12,7 +12,7 @@ for i in range(a):
 maxim = max(limit_high)
 j = 3
 arr = [2]
-while j <= int(maxim):
+while j <= maxim:
     for k in arr:
         if (j%k == 0):
             break
@@ -21,7 +21,15 @@ while j <= int(maxim):
         continue
     j = j + 1
 for i in range(a):
-    for j in range(len(arr)):
-        if (arr[j] >= limit_low[i] and arr[j] <= limit_high[i]):
-            print arr[j]
+    index = 0
+    length = len(arr)
+    for j in range(length):
+        if arr[j] >= limit_low[i]:
+            index = j
+            break
+    while (index < length):
+        if arr[index] >= limit_high[i]:
+            break
+        print arr[index]
+        index = index + 1
     print ""
