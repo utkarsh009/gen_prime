@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-from math import sqrt
 
 a = int(raw_input(""))
 limit_low, limit_high = [], []
@@ -18,7 +17,6 @@ while j <= maxim:
             break
         if (k == arr[-1]):
             arr.append(j)
-        continue
     j = j + 1
 for i in range(a):
     index = 0
